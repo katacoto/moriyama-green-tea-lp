@@ -32,7 +32,13 @@
   <body>
     <header class="header">
       <div class="header_inner">
-        <h1>森山園</h1>
+        <div class="header_log_title">
+          <img src="./images/moriyama_leaf_logo.png" alt="leaf" />
+          <div class="header_title mincho">
+            <h1>森山園</h1>
+            <p>MORIYAMA EN</p>
+          </div>
+        </div>
         <div id="hamburger_button" class="hamburger_button">
           <i class="fas fa-bars hamburger-bars"></i>
         </div>
@@ -54,12 +60,23 @@
       </div>
 
       <!-- ハンバーガーメニュー -->
-      <div class="hamburger">
-        <ul id="hamburger_menu" class="hamburger_menu">
-          <li><a href="#introduction">商品について</a></li>
-          <li><a href="#feature">こだわり</a></li>
-          <li><a href="#product">商品情報</a></li>
-          <li><a href="#message">メッセージ</a></li>
+      <div class="hamburger" id="hamburger">
+        <ul class="hamburger_menu">
+          <li>
+            <a href="#introduction">商品について<i class="fas fa-chevron-right"></i></a>
+          </li>
+          <li>
+            <a href="#feature">こだわり<i class="fas fa-chevron-right"></i></a>
+          </li>
+          <li>
+            <a href="#product">商品情報<i class="fas fa-chevron-right"></i></a>
+          </li>
+          <li>
+            <a href="#message">メッセージ<i class="fas fa-chevron-right"></i></a>
+          </li>
+          <a class="btn btn_icon" href="#">
+            オンラインショップで購入する<i class="fas fa-arrow-right"></i>
+          </a>
         </ul>
       </div>
     </header>
@@ -100,7 +117,7 @@
           <div class="feature_cloumn">
             <div class="feature_box">
               <div class="feature_box_text">
-                <span>01</span>
+                <span class="mincho">01</span>
                 <h3>春摘みの茶葉</h3>
                 <p>一番茶の中でも、特にやわらかな新芽を使用。</p>
               </div>
@@ -109,7 +126,7 @@
 
             <div class="feature_box">
               <div class="feature_box_text">
-                <span>02</span>
+                <span class="mincho">02</span>
                 <h3>深蒸し製法</h3>
                 <p>通常より長く蒸すことで、まろやかな味わいに。</p>
               </div>
@@ -118,7 +135,7 @@
 
             <div class="feature_box">
               <div class="feature_box_text">
-                <span>03</span>
+                <span class="mincho">03</span>
                 <h3>香り豊かな仕上がり</h3>
                 <p>ふわっと広がる茶葉の香りを楽しめます。</p>
               </div>
@@ -237,6 +254,12 @@
         <small>&copy;森山園</small>
       </div>
     </footer>
+
+    <!-- jQuery（必須） -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- jQuery Migrate（開発中のみ。問題が解決したら削除） -->
+    <script src="https://code.jquery.com/jquery-migrate-3.4.1.js"></script>
 
     <!-- ▼ ライブラリJS（必要なものだけ追加） -->
     <!-- slick_js -->

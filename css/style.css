@@ -18,18 +18,17 @@
    pc（768～1439px）
    リキッド：画面幅に応じて拡大縮小
 ========================================= */
-html {
-  font-size: calc(10 / 375 * 100vw);
+@media (max-width: 767) {
+  html {
+    font-size: calc(10 / 375 * 100vw);
+  }
 }
-
 /* =========================================
    PCソリッド（1440px〜）
    固定レイアウト：10px 基準（62.5%）
 ========================================= */
-@media (min-width: 1440px) {
-  html {
-    font-size: 62.5%;
-  }
+html {
+  font-size: 62.5%;
 }
 
 body {
@@ -96,18 +95,30 @@ h3 {
   justify-content: center;
   align-items: center;
   background-color: #3f5b45;
-  border-radius: 2rem;
+  border-radius: 3rem;
   font-size: 1.2rem;
   color: #fff;
   font-weight: 400;
   text-align: center;
   cursor: pointer;
   margin-inline: auto;
-  padding-block: 2vw;
-  width: 27.7rem;
+  padding-block: 1vw;
+  width: 19vw;
 }
 .btn i {
   margin-left: 2vw;
+}
+@media (max-width: 767px) {
+  .btn {
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding-block: 2vw;
+    width: 75vw;
+  }
+  .btn i {
+    margin-left: 2vw;
+  }
 }
 
 /* container */
@@ -129,88 +140,104 @@ h3 {
 }
 
 /* header ---------------*/
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  background-color: #f7f5ee;
+@media (max-width: 767px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: #f7f5ee;
+  }
 }
-/* ハンバーガーメニューの下のコンテンツを
-動かないようにしたい場合は
-次のコンテンツのpadding-topを広げる */
-
 .header_inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
-  height: 16vw;
+  padding-inline: 3vw;
+}
+@media (max-width: 767px) {
+  .header_inner {
+    height: 60px;
+  }
 }
 
 .header_log_title {
   display: flex;
   align-items: center;
-  margin-left: 4vw;
-  gap: 2vw;
+}
+@media (max-width: 767px) {
+  .header_log_title {
+    margin-left: 4vw;
+    gap: 2vw;
+  }
 }
 
 .header_log_title img {
-  width: 7vw;
-  height: 7vw;
+  width: 3rem;
 }
-.header_title h1 {
-  font-size: 2rem;
-  letter-spacing: 0.2em;
-  line-height: 1.5;
+@media (max-width: 767px) {
+  .header_log_title img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
-.header_title p {
-  font-size: 0.6rem;
-  font-weight: 800;
-  letter-spacing: 0.3em;
+@media (max-width: 767px) {
+  .header_title h1 {
+    font-size: 2rem;
+    letter-spacing: 0.2em;
+    line-height: 1.5;
+  }
 }
-
+@media (max-width: 767px) {
+  .header_title p {
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 0.3em;
+  }
+}
 .hamburger_button {
-  display: block;
+  display: none;
+}
+@media (max-width: 767px) {
+  .hamburger_button {
+    display: block;
+  }
 }
 
-.hamburger_button i {
-  font-size: 8.6vw;
-  margin-right: 4vw;
-  color: #606060;
-}
-@media (min-width: 768px) {
-  .hamburger_button {
-    display: none;
+@media (max-width: 767px) {
+  .hamburger_button i {
+    font-size: 3rem;
+    margin-right: 4vw;
+    color: #606060;
   }
 }
 
 .menu {
-  display: none;
+  display: flex;
 }
-@media (min-width: 768px) {
+@media (max-width: 767px) {
   .menu {
-    display: flex;
+    display: none;
   }
-  .navi_menu {
-    display: flex;
-    align-items: center;
-  }
+}
+.navi_menu {
+  display: flex;
+  align-items: center;
 }
 
 .navi_menu li {
-  background-color: #fff;
-  opacity: 1;
-  border: 1px solid #606060;
   z-index: 20;
   height: 2.35vw;
   padding: 0.2vw 1.1vw 0.2vw 1.1vw;
   margin-top: 0.15vw;
   margin-right: 0.6vw;
 }
-@media (min-width: 768px) {
+@media (max-width: 767px) {
   .navi_menu li {
+    background-color: #fff;
+    opacity: 1;
+    border: 1px solid #606060;
     z-index: 20;
     height: 2.35vw;
     padding: 0.2vw 1.1vw 0.2vw 1.1vw;
@@ -219,62 +246,69 @@ header {
   }
 }
 
-.hamburger {
-  background-image: url('../images/茶畑.png');
-  background-size: cover;
-  max-height: 100vh;
-  padding-block: 5vw;
+@media (max-width: 767px) {
+  .hamburger {
+    background-image: url('../images/茶畑.png');
+    background-size: cover;
+    max-height: 100vh;
+    padding-block: 5vw;
 
-  position: fixed;
-  top: 16vw;
-  right: 0;
-  width: 100%;
-  height: calc(100vh - 16vw);
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    height: calc(100vh - 16vw);
 
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
 
-  overflow: auto;
+    overflow: auto;
+  }
 }
-@media (min-width: 768px) {
-}
-
-.hamburger.open {
-  transform: translateX(0);
-}
-
-.hamburger_menu {
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 1rem;
-  margin-inline: 7vw;
-  padding: 5vw 6vw;
-}
-
-@media (min-width: 768px) {
-  .hamburger_menu {
-    display: none;
+@media (max-width: 767px) {
+  .hamburger.open {
+    transform: translateX(0);
   }
 }
 
-.hamburger_menu li {
-  line-height: 4.5em;
+.hamburger_menu {
+  display: none;
+}
+@media (max-width: 767px) {
+  .hamburger_menu {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 1rem;
+    text-align: center;
+    margin-inline: 7vw;
+    padding: 5vw 6vw;
+  }
 }
 
-.hamburger_menu li a {
-  font-size: 2rem;
-  font-weight: 600;
-  border-bottom: solid 0.5px #3f5b45;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+@media (max-width: 767px) {
+  .hamburger_menu li {
+    line-height: 4.5em;
+  }
 }
-
+@media (max-width: 767px) {
+  .hamburger_menu li a {
+    font-size: 2rem;
+    font-weight: 600;
+    border-bottom: solid 0.5px #3f5b45;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
 .hamburger .btn {
-  margin-top: 10rem;
 }
-
+@media (max-width: 767px) {
+  .hamburger .btn {
+    margin-top: 10rem;
+  }
+}
 /* fv */
 .fv {
   background-image: url('../images/fv_background_img.png');
-  padding-top: 16vw;
+  padding-top: 60px;
 }

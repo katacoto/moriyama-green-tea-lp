@@ -69,6 +69,14 @@
 「お茶＝和風」に寄せすぎず、
 和紙・筆文字・家紋などのデザインは使用しない。
 
+### イメージ画像
+
+- SP/PC
+  ![quiz screenshot](./images/readme_image.png)
+
+- menu
+  ![quiz screenshot](./images/readme_menu.png)
+
 ## 制作記録
 
 ### 制作開始
